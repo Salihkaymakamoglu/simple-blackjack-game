@@ -28,6 +28,7 @@ if(isAlive===false){
         cards=[firstCard,secondCard]
         sum=firstCard+secondCard
         isAlive=true
+        hasBlackjack=false
         renderGame()
     }
 }
@@ -51,6 +52,7 @@ function renderGame(){
     else if(sum === 21){
         message="BLACKJACK!!!"
         hasBlackjack = true
+        isAlive=false
     } 
 
     else {
@@ -70,8 +72,5 @@ function newCard(){
     sum += newcard
     cards.push(newcard)
     renderGame()
-}else{
-    alert("you are out of the game")
 }
-
 }
